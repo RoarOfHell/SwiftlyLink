@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1E1E2E;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #2B2B3D;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #6C63FF;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    font-weight: 600;
+}
+
+header nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #6C63FF;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6C63FF, #2B2B3D);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
+}
+
+.hero .btn-container {
+    opacity: 0;
+    animation: fadeInUp 2.5s forwards;
+}
+
+.btn-container a {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #6C63FF;
+    color: #FFF;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-container a:hover {
+    background-color: #524DFF;
+}
+
+section {
+    padding: 80px 50px;
+}
+
+.features {
+    background-color: #2B2B3D;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.features-grid .feature {
+    background-color: #3A3A5B;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.features-grid .feature:hover {
+    transform: scale(1.05);
+}
+
+.features-grid .feature img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.features-grid .feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.features-grid .feature p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.testimonials {
+    background-color: #1E1E2E;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.testimonial {
+    background-color: #2B2B3D;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 30%;
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.faq {
+    background-color: #2B2B3D;
+    color: #FFF;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 20px;
+    background-color: #3A3A5B;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.faq-item:hover {
+    background-color: #524DFF;
+}
+
+.faq-item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    display: none;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2B2B3D;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: #FFF;
+    font-size: 16px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Стили для всей полосы прокрутки */
+::-webkit-scrollbar {
+width: 12px;               /* Ширина вертикальной полосы прокрутки */
+height: 12px;              /* Высота горизонтальной полосы прокрутки */
+}
+
+/* Стили для ползунка (бегунка) */
+::-webkit-scrollbar-thumb {
+background-color: #5469D4; /* Основной цвет ползунка */
+border-radius: 10px;       /* Закругление углов */
+border: 3px solid #1e1e1e; /* Отступ от края и цвет фона полосы прокрутки */
+}
+
+/* Эффект при наведении на ползунок */
+::-webkit-scrollbar-thumb:hover {
+background-color: #6c7ae0; /* Яркий оттенок при наведении */
+}
+
+/* Стили для полосы прокрутки (фон) */
+::-webkit-scrollbar-track {
+background-color: #1e1e1e; /* Темный фон полосы прокрутки */
+border-radius: 10px;       /* Закругление фона полосы */
+}
+
+/* Убираем внутренние края для FireFox */
+* {
+scrollbar-width: thin;             /* Уменьшаем ширину полосы прокрутки */
+scrollbar-color: #5469D4 #1e1e1e;  /* Цвет ползунка и фона */
+}

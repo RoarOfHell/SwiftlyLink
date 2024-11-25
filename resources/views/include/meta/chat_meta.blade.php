@@ -1,0 +1,1 @@
+<meta name="modal-settings-url" content="{{ route('modal_settings') }}"/>

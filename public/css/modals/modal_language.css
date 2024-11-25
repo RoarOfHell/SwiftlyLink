@@ -1,0 +1,48 @@
+.functions{
+    padding: 5px 10px;
+}
+
+.function{
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.language_list{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.language-element{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.language-element:hover{
+    background-color: #555;
+}
+
+.element-language{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 10px;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.language-name-for-country{
+    color: white;
+    font-size: 16px;
+}
+
+.language-name{
+    color: rgb(134, 134, 134);
+    font-size: 14px;
+}

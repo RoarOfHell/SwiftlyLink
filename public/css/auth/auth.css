@@ -1,0 +1,168 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1A1A1A, #222229); /* Приятный градиент на фоне */
+    overflow: hidden; /* Скрыть все, что выходит за пределы экрана */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Анимация фона */
+@keyframes animate-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background-size: 400% 400%;
+    animation: animate-bg 15s ease infinite;
+}
+
+/* Плавное появление окна авторизации */
+.login-box {
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1s ease-in-out;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+/* Круг в качестве декора */
+.circle {
+    width: 150px;
+    height: 150px;
+    background: #66b2ff;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(102, 178, 255, 0.7);
+    animation: circle-animation 5s infinite alternate;
+}
+
+@keyframes circle-animation {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-30px, 30px);
+    }
+}
+
+/* Поля ввода */
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #555;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 16px;
+    color: #888;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -20px;
+    font-size: 12px;
+    color: #66b2ff;
+}
+
+/* Кнопка входа */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #66b2ff;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #559cd9;
+}
+
+/* Ссылка на регистрацию */
+.register-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.register-link a {
+    color: #66b2ff;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.error{
+    color: rgb(158, 0, 0);
+    padding: 10px;
+}
